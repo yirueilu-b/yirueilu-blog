@@ -3,6 +3,7 @@ import {withStyles} from '@material-ui/core/styles';
 import LandingSection from '../components/LandingSection'
 import Layout from "../components/Layout/Layout";
 import ArticleList from "../components/ArticleList"
+import SEO from "../components/SEO"
 
 const useStyles = {
     root: {
@@ -25,6 +26,9 @@ class App extends React.Component {
         // const {classes} = this.props;
         return (
             <Layout>
+                <SEO
+                    title="Blog"
+                />
                 <LandingSection/>
                 <ArticleList/>
             </Layout>

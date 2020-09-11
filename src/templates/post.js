@@ -2,6 +2,7 @@ import ArticleDetail from '../components/ArticleDetail/ArticleDetail'
 import React from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import Layout from "../components/Layout/Layout";
+import SEO from "../components/SEO"
 
 
 const useStyles = {
@@ -22,10 +23,14 @@ class App extends React.Component {
     // }
 
     render() {
-        console.log(this);
         // const {classes} = this.props;
         return (
             <Layout>
+                <SEO
+                    title={this.props.pageContext['title']}
+                    description={this.props.pageContext['description']}
+                    image_url={this.props.pageContext['image']}
+                />
                 <ArticleDetail pageContext={this.props.pageContext}/>
             </Layout>
         );

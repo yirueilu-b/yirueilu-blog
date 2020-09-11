@@ -19,6 +19,7 @@ class Article extends React.Component {
     }
 
     componentDidMount() {
+        console.log(this.props);
         let markdownHTML = md.render(this.props.pageContext['text']);
         this.setState({markdownHTML: markdownHTML});
         // comment info
@@ -29,7 +30,7 @@ class Article extends React.Component {
         script.setAttribute("async", true);
         script.setAttribute("repo", "yirueilu-b/YirueiLuBlog");
         script.setAttribute("issue-term", this.props.pageContext['uuid']);
-        // script.setAttribute("theme", this.props.theme === 'dark' ? "github-dark" : "github-light");
+        script.setAttribute("theme", this.props.theme.palette.type === 'dark' ? "github-dark" : "github-light");
         anchor.appendChild(script);
     }
 

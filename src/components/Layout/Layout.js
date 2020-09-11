@@ -1,5 +1,4 @@
 import React from "react"
-import {StaticQuery, graphql} from "gatsby"
 import {MuiThemeProvider} from "@material-ui/core/styles";
 import CssBaseline from '@material-ui/core/CssBaseline';
 import {withStyles} from '@material-ui/core/styles';
@@ -77,12 +76,15 @@ class Layout extends React.Component {
     render() {
         const children = this.props.children;
         const {classes} = this.props;
+        const childrenWithProps = React.Children.map(children, (child) =>
+            React.cloneElement(child, {theme: this.state.theme})
+        );
         return (
             <MuiThemeProvider theme={this.state.theme}>
                 <CssBaseline/>
                 <Container className={classes.root}>
                     <Navbar theme={this.state.theme} onToggleDark={this.toggleDarkTheme}/>
-                    {children}
+                    {childrenWithProps}
                     <Footer/>
                 </Container>
             </MuiThemeProvider>
