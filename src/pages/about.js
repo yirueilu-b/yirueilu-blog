@@ -1,8 +1,8 @@
+import About from '../components/About'
 import React from 'react';
 import {withStyles} from '@material-ui/core/styles';
-import LandingSection from '../components/LandingSection'
 import Layout from "../components/Layout/Layout";
-import ArticleList from "../components/ArticleList"
+
 
 const useStyles = {
     root: {
@@ -25,8 +25,7 @@ class App extends React.Component {
         // const {classes} = this.props;
         return (
             <Layout>
-                <LandingSection/>
-                <ArticleList/>
+                <About/>
             </Layout>
         );
     }
