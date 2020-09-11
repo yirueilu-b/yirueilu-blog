@@ -82,7 +82,7 @@ class Layout extends React.Component {
                 <CssBaseline/>
                 <Container className={classes.root}>
                     <Navbar theme={this.state.theme} onToggleDark={this.toggleDarkTheme}/>
-                    {this.props.children({...this.props})}
+                    {children}
                     <Footer/>
                 </Container>
             </MuiThemeProvider>
