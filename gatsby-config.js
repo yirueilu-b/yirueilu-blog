@@ -4,8 +4,10 @@ module.exports = {
         title: `YirueiLuBlog`,
         description: `Some notes about web applications, machine learning and coding`,
         author: `@YirueiLu`,
+        siteUrl: 'https://yirueilu-b.github.io/YirueiLuBlogGatsby/',
     },
     plugins: [
+        `gatsby-plugin-sitemap`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
