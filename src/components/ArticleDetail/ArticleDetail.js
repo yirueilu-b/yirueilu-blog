@@ -5,6 +5,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
 
 import 'highlight.js/styles/darcula.css';
+import 'katex/dist/katex.min.css';
 import useStyles from './markdownStyle'
 import md from './markdownIt'
 import ScrollToTopOnMount from '../Layout/ScrollTopOnMount'

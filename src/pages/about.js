@@ -28,9 +28,7 @@ class App extends React.Component {
             <Layout>
                 <SEO
                     title="About"
-                    description="I am a software engineer in Institute for
-                            Information Industry ( III ) and I am responsible for developing web applications and
-                            researching the latest deep learning algorithms."
+                    description="Hi! I am Yi-Ruei, Lu, A software engineer in Institute for Information Industry ( III ). I am interested in building Web Apps and the topics about Machine Learning. Welcome to my blog and hope you find my posts useful"
                 />
                 <About/>
             </Layout>

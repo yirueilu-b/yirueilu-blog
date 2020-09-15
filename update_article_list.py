@@ -26,7 +26,7 @@ def get_description(html_parsed):
     try:
         all_text = ''.join([x.text for x in html_parsed.find_all('p')])
         description = all_text[:DESCRIPTION_MAX_LENGTH]
-        return description
+        return description + '...'
     except:
         return ""
 
