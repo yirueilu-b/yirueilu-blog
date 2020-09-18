@@ -45,11 +45,11 @@ Note:
 
 ## Idea
 
-Follow the given instructions to move the robot then check some coditions to determine if it is in a circle.
+Follow the given instructions to move the robot then check some conditions to determine if it is in a circle.
 
-The first thing to check is the final position of the robot and its initial position. If the positions are the same, it is difintely in a circle.
+The first condition to check is the final position of the robot and its initial position. It's trivial that if the positions are the same, it is in a circle.
 
-If the positions are not the same then check the initial and final directions. The robot's initial direction is North, if its final direction is not the same as its initial direction then it is in a circle.
+The second condition is checking the initial and final directions. The robot's initial direction is North, if its final direction is not the same as its initial direction then it is in a circle.
 
 ## Code
 
@@ -86,6 +86,8 @@ class Solution:
 ```
 
 ## Note
+
+The key of this problem is to think of the condition of final direction.
 
 Remember to read the description carefully!
 

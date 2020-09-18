@@ -3,6 +3,7 @@ import glob
 import os
 import platform
 import time
+import datetime
 
 from bs4 import BeautifulSoup
 import markdown
@@ -65,8 +66,6 @@ if __name__ == '__main__':
             exist_data = json.loads(json.load(f))
     else:
         exist_data = []
-
-    # [print(data) for data in exist_data]
     res_json = []
     for article_path in ALL_ARTICLE_PATH:
         article_parsed = parse_md(article_path)
@@ -74,20 +73,25 @@ if __name__ == '__main__':
         item['article_title'] = get_title(article_parsed)
         item['article_description'] = get_description(article_parsed)
         item['article_datetime'] = get_datetime(article_path)
+        item['article_update_datetime'] = get_datetime(article_path)
         item['article_cover_image_url'] = get_cover_image_url(article_parsed)
         item['article_md_path'] = article_path.split(os.sep)[-1].replace('.md', '')
         item['uuid'] = uuid.uuid4().hex[:6]
+        # Immutable attributes
         for article in exist_data:
             if item["article_md_path"] == article["article_md_path"]:
                 item['uuid'] = article['uuid']
+                item['article_datetime'] = time.mktime(datetime.datetime.strptime(article['article_datetime'],
+                                                                                  "%a %b %d %H:%M:%S %Y").timetuple())
+                item['article_datetime'] = round(item['article_datetime'])
                 break
         res_json.append(item)
+    # Sort articles in create time
     res_json.sort(key=lambda x: -x['article_datetime'])
-    for i in range(len(res_json)): res_json[i]['article_datetime'] = time.ctime(res_json[i]['article_datetime'])
+    for i in range(len(res_json)):
+        res_json[i]['article_datetime'] = time.ctime(res_json[i]['article_datetime'])
+        res_json[i]['article_update_datetime'] = time.ctime(res_json[i]['article_update_datetime'])
+    # Export as JSON
     res_json = json.dumps(res_json, indent=4)
-    with open(RES_JSON_PATH, 'w') as outfile:
-        json.dump(res_json, outfile)
-
-    with open(RES_JSON_PATH) as f:
-        data = json.load(f)
-    print(data)
+    with open(RES_JSON_PATH, 'w') as outfile: json.dump(res_json, outfile)
+    with open(RES_JSON_PATH) as f: data = json.load(f)

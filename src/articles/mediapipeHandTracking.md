@@ -139,7 +139,7 @@ def get_hand(input_image, key_points, side):
 
 ### detectLandmark
 
-Pass the preprocessed image to `detectLandmark` to get corresponding 7 key points and bounding box of hand
+Pass the preprocessed image to `detectLandmark` to get corresponding 21 key points of hand
 
 ![](https://i.imgur.com/AsUnjLW.png)
 
