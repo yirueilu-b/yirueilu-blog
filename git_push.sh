@@ -7,7 +7,7 @@ read message
 
 while true
 do
-    echo "Are you sure to commit with ${message} message? ( y/n )"
+    echo "Are you sure to commit with '${message}' message? ( y/n )"
     read confirm
     if [[ "${confirm}" == "y" ]]; then
         git commit -m "${message}"
