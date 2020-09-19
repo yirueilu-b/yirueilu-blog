@@ -89,12 +89,62 @@ class Solution:
 > - Time complexity: `O(n)`        
 >   Iterate through `n` given instructions
 > - Space complexity: `O(1)`    
->   Only constant variables for keep position and direction
+>   Only constant variables for keeping latest position and direction
 
 ## Note
 
-The key of this problem is to think of the condition of final direction.
+- The key of this problem is to think of the condition of final direction.
 
-Remember to read the description carefully!
+- Visualize the process:
+
+```python
+plt.figure(figsize=(32, 6))
+for i in range(4):
+    init_position = [0, 0]
+    position = [0, 0]
+    init_direction = (0, 1)
+    direction = (0, 1)
+    plt.subplot(1,5,i+1)
+    plt.title("Run instructions Iteration " + str(i+1))
+    plt.scatter(position[0], position[1], c='g')
+    plt.arrow(position[0], position[1] ,dx=direction[0]*0.3,dy=direction[1]*0.3, head_width=0.5, head_length=0.3, fc='g', ec='g')
+    for i in range(i+1):
+        iteration = 0
+        for instruction in instructions:
+            if instruction == "G":
+                position[0] += direction[0]
+                position[1] += direction[1]
+            elif instruction == "L":
+                if direction == (0, 1):
+                    direction = (-1, 0)
+                elif direction == (-1, 0):
+                    direction = (0, -1)
+                elif direction == (0, -1):
+                    direction = (1, 0)
+                else:
+                    direction = (0, 1)
+            else:
+                if direction == (0, 1):
+                    direction = (1, 0)
+                elif direction == (1, 0):
+                    direction = (0, -1)
+                elif direction == (0, -1):
+                    direction = (-1, 0)
+                else:
+                    direction = (0, 1)
+            plt.scatter(position[0], position[1], c='b')
+            plt.arrow(position[0], position[1] ,dx=direction[0]*0.3,dy=direction[1]*0.3, head_width=0.5, head_length=0.3, fc='b', ec='b')
+            iteration += 1
+    plt.scatter(position[0], position[1], c='r')
+    plt.arrow(position[0], position[1] ,dx=direction[0]*0.3,dy=direction[1]*0.3, head_width=0.5, head_length=0.3, fc='r', ec='r')
+    plt.grid()
+plt.show()
+```
+
+![](https://i.imgur.com/tlGlvrC.png)
+
+![](https://i.imgur.com/0Un2vT4.png)
+
+- Remember to read the description carefully!
 
 ###### tags: `Coding`
