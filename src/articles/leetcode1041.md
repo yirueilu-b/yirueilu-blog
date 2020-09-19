@@ -51,7 +51,7 @@ The first condition to check is the final position of the robot and its initial 
 
 The second condition is checking the initial and final directions. The robot's initial direction is North, if its final direction is not the same as its initial direction then it is in a circle.
 
-## Code
+## Solution
 
 ```python
 class Solution:
@@ -84,6 +84,12 @@ class Solution:
                     direction = (0, 1)
         return init_position == position or init_direction != direction
 ```
+
+> **Complexity**
+> - Time complexity: `O(n)`        
+>   Iterate through `n` given instructions
+> - Space complexity: `O(1)`    
+>   Only constant variables for keep position and direction
 
 ## Note
 

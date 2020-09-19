@@ -206,7 +206,7 @@ const useStyles = theme => ({
             backgroundColor: 'rgba(55, 168, 218, 0.2)',
             // backgroundColor: 'rgba(0, 0, 0, 0.2)',
             // backgroundColor: theme.palette.text.primary,
-            padding: '4px 24px',
+            padding: '8px 24px',
             margin: '12px 0',
             '& p': {
                 marginTop: '16px',
