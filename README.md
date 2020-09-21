@@ -8,7 +8,7 @@ The original React App built with CRA could be found [here](https://github.com/y
 
 ## Note
 
-use `bash git_push_new_post.sh` to update on develop branch
+use `bash git_push.sh` to update on develop branch
 
 `npm run deploy` to publish new page
 
