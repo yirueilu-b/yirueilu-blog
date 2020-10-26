@@ -1,11 +1,11 @@
 module.exports = {
-    // Github page has 'prefix' as repository name. Include it in siteUrl or add it as pathPrefix.
-    // pathPrefix: `/YirueiLuBlogGatsby`,
+    // Github page has 'prefix' as repository name. Add it as pathPrefix.
+    pathPrefix: `/YirueiLuBlogGatsby`,
     siteMetadata: {
         title: `YirueiLuBlog`,
         description: `Some notes about web applications, machine learning and coding`,
         author: `@YirueiLu`,
-        siteUrl: 'https://yirueilu-b.github.io/YirueiLuBlogGatsby/',
+        siteUrl: 'https://yirueilu-b.github.io/',
     },
     plugins: [
         `gatsby-plugin-sitemap`,
