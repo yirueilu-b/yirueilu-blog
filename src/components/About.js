@@ -11,6 +11,8 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import ProjectImage1 from "../images/catSegmentation.png"
+import Button from '@material-ui/core/Button';
+import {Link} from "gatsby";
 
 const section_padding_small = '5vh 10vw';
 const section_padding = '26vw';
@@ -35,8 +37,8 @@ const useStyles = theme => ({
         },
         // borderBottom: `${section_divider} solid ${theme.palette.divider}`,
         backgroundImage: theme.palette.type === 'dark' ?
-            'url(https://thumbs.gfycat.com/UnequaledLazyGrayreefshark-size_restricted.gif)' :
-            'url(https://thumbs.gfycat.com/FrightenedNaughtyDarwinsfox-size_restricted.gif)',
+            'url(https://wallpapercave.com/wp/wp4067426.jpg)':
+            'url(https://ipofficelive.com.au/wp-content/uploads/2019/03/slideshow-banner-test.png)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -145,16 +147,16 @@ function Profile(props) {
                 <Grid className={classes.right} container item xs={12} md={8} justify="flex-start">
                     <Grid container item xs={12} justify="flex-start" alignItems="flex-start">
                         <Typography gutterBottom variant='h5'>About Me</Typography>
-                        <Typography gutterBottom variant='subtitle1'>I am a software engineer in Institute for
-                            Information Industry ( III ) and I am responsible for developing web applications and
-                            researching the latest deep learning algorithms.</Typography>
-                    </Grid>
-                    <Grid className={classes.right2} container item xs={12} justify="flex-start"
-                          alignItems="flex-start">
-                        <Typography gutterBottom variant='h5'>Skills</Typography>
-                        <Typography gutterBottom variant='subtitle1'>Skilled in Python and JavaScript, Hands-on
-                            experience in Django and Flask, Familiar with Deep Learning algorithms, Hands-on experience
-                            in Tensorflow and Keras, Strong background knowledge of Computer Science</Typography>
+                        <Typography gutterBottom variant='subtitle1'>Software engineer with 3 years of experience in implementing and applying deep learning models in real-world environment. Interested in learning new technologies especially about AI and Web. Passionate about creating fun and useful things and solving problems.</Typography>
+                        <Button component={Link}
+                                size="small"
+                                variant="outlined"
+                                to={"https://www.cakeresume.com/ray-lu-1f08fc"}
+                                target="_blank"
+                                style={{padding: '12px 15px', marginTop: '10px', textTransform: 'none'}}
+                                >
+                            <Typography gutterBottom variant='subtitle1'>Checkout my resume</Typography>
+                        </Button>
                     </Grid>
                 </Grid>
 

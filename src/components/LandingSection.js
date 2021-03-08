@@ -17,7 +17,7 @@ const post = {
     title: 'Title of a longer featured blog post',
     description:
         "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-    image: 'https://source.unsplash.com/random',
+//    image: 'https://wallpapercave.com/wp/wp4067426.jpg',
     imgText: 'main image description',
 };
 
@@ -26,10 +26,13 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '10%',
         paddingRight: '10%',
         position: 'relative',
-        backgroundColor: theme.palette.grey[800],
-        color: theme.palette.common.white,
+//        backgroundColor: theme.palette.grey[800],
+//        color: theme.palette.common.white,
         marginBottom: theme.spacing(4),
-        backgroundImage: 'url(https://source.unsplash.com/random)',
+//        backgroundImage: 'url(https://source.unsplash.com/random)',
+        backgroundImage: theme.palette.type === 'dark' ?
+            'url(https://wallpapercave.com/wp/wp4067426.jpg)':
+            'url(https://ipofficelive.com.au/wp-content/uploads/2019/03/slideshow-banner-test.png)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -41,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
         bottom: 0,
         right: 0,
         left: 0,
-        backgroundColor: 'rgba(0,0,0,.3)',
+//        backgroundColor: 'rgba(0,0,0,.3)',
     },
     mainFeaturedPostContent: {
         marginTop: theme.spacing(4),
@@ -50,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(3),
         [theme.breakpoints.up('md')]: {
             padding: theme.spacing(6),
+            paddingLeft: theme.spacing(24),
             paddingRight: 0,
         },
     },
@@ -73,7 +77,7 @@ export default function MainFeaturedPost(props) {
         <Fade in={true} timeout={3000}>
             <Paper
                 className={classes.mainFeaturedPost}
-                style={{backgroundImage: `url(${post.image})`}}
+//                style={{backgroundImage: `url(${post.image})`}}
             >
                 {/* Increase the priority of the hero background image */}
                 {<img style={{display: 'none'}} src={post.image} alt='imageText'/>}
