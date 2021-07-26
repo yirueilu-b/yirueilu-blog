@@ -154,3 +154,5 @@ Original serializer class is replicating a lot of information that's also contai
 
 [DRF API Guide](https://www.django-rest-framework.org/api-guide/serializers/#serializers)
 [Django REST Framework Full Course For Beginners | Build REST API With Django](https://www.django-rest-framework.org/api-guide/serializers/#serializers)
+
+###### tags: `Web`

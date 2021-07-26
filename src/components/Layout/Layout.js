@@ -25,7 +25,7 @@ const fontFamily = [
 
 let myTheme = unstable_createMuiStrictModeTheme({
     palette: {
-        type: 'light'
+        type: 'dark'
     },
     typography: {
         fontFamily: fontFamily,
