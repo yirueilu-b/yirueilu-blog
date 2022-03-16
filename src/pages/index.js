@@ -16,14 +16,7 @@ const useStyles = {
 };
 
 class App extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
-    // componentDidMount() {
-    // }
-
     render() {
-        // const {classes} = this.props;
         return (
             <Layout>
                 <SEO

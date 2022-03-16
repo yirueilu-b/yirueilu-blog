@@ -98,31 +98,31 @@ class MainMenu:
                                                           width=self.width // self.grid[1],
                                                           height=self.height // self.grid[0]),
                                     action=URIAction(label='default',
-                                                     uri='https://yirueilu-b.github.io/YirueiLuBlogGatsby/'))
+                                                     uri='https://yirueilu-b.github.io/yirueilu-blog/'))
         self.area1_3 = RichMenuArea(bounds=RichMenuBounds(x=self.height // self.grid[0] * 2,
                                                           y=0,
                                                           width=self.width // self.grid[1],
                                                           height=self.height // self.grid[0]),
                                     action=URIAction(label='default',
-                                                     uri='https://yirueilu-b.github.io/YirueiLuBlogGatsby/'))
+                                                     uri='https://yirueilu-b.github.io/yirueilu-blog/'))
         self.area2_1 = RichMenuArea(bounds=RichMenuBounds(x=0,
                                                           y=self.height // self.grid[0],
                                                           width=self.width // self.grid[1],
                                                           height=self.height // self.grid[0]),
                                     action=URIAction(label='default',
-                                                     uri='https://yirueilu-b.github.io/YirueiLuBlogGatsby/'))
+                                                     uri='https://yirueilu-b.github.io/yirueilu-blog/'))
         self.area2_2 = RichMenuArea(bounds=RichMenuBounds(x=self.height // self.grid[0],
                                                           y=self.height // self.grid[0],
                                                           width=self.width // self.grid[1],
                                                           height=self.height // self.grid[0]),
                                     action=URIAction(label='default',
-                                                     uri='https://yirueilu-b.github.io/YirueiLuBlogGatsby/'))
+                                                     uri='https://yirueilu-b.github.io/yirueilu-blog/'))
         self.area2_3 = RichMenuArea(bounds=RichMenuBounds(x=self.height // self.grid[0] * 2,
                                                           y=self.height // self.grid[0],
                                                           width=self.width // self.grid[1],
                                                           height=self.height // self.grid[0]),
                                     action=URIAction(label='default',
-                                                     uri='https://yirueilu-b.github.io/YirueiLuBlogGatsby/'))
+                                                     uri='https://yirueilu-b.github.io/yirueilu-blog/'))
         self.menu = self.create_menu()
 
     def create_menu(self):

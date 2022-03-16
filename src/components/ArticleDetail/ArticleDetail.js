@@ -29,7 +29,7 @@ class Article extends React.Component {
         script.setAttribute("src", "https://utteranc.es/client.js");
         script.setAttribute("crossorigin", "anonymous");
         script.setAttribute("async", true);
-        script.setAttribute("repo", "yirueilu-b/YirueiLuBlogGatsby");
+        script.setAttribute("repo", "yirueilu-b/yirueilu-blog");
         script.setAttribute("issue-term", this.props.pageContext['uuid']);
         script.setAttribute("theme", this.props.theme.palette.type === 'dark' ? "github-dark" : "github-light");
         anchor.appendChild(script);
