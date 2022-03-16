@@ -1,6 +1,6 @@
 module.exports = {
     // Github page has 'prefix' as repository name. Add it as pathPrefix.
-    pathPrefix: `/YirueiLuBlogGatsby`,
+    pathPrefix: `/yirueilu-blog`,
     siteMetadata: {
         title: `YirueiLuBlog`,
         description: `Some notes about web applications, machine learning and coding`,
