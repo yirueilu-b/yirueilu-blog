@@ -2,25 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import {Helmet} from "react-helmet"
 
-// import {useStaticQuery, graphql} from "gatsby"
 
 function SEO({description, lang, meta, title, image_url}) {
-    // const {site} = useStaticQuery(
-    //     graphql`
-    //   query {
-    //     site {
-    //       siteMetadata {
-    //         title
-    //         description
-    //         author
-    //       }
-    //     }
-    //   }
-    // `
-    // );
     const meta_image = image_url || "https://i.imgur.com/LFQNo7Sm.jpg";
     const metaDescription = description || "Some notes about web applications, machine learning and coding";
-
     return (
         <Helmet
             htmlAttributes={{

@@ -10,6 +10,7 @@ The original React App built with CRA could be found [here](https://github.com/y
 - Clone this REPO.
 - `pip install -r requirements.txt`
 - `npm install`
+- `npm run develop` to see pages locally.
 - Use `bash git_push.sh` to update on develop branch.
 - `npm run deploy` to publish new page.
 

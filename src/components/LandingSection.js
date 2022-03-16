@@ -9,6 +9,9 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Fade from '@material-ui/core/Fade';
+import darkBg from "../images/dark_bg.jpg"
+import lightBg from "../images/light_bg.jpeg"
+
 
 const blog_title = "YirueiLu's Blog";
 const blog_description = "Some notes about web applications, machine learning and coding.";
@@ -17,7 +20,6 @@ const post = {
     title: 'Title of a longer featured blog post',
     description:
         "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
-//    image: 'https://wallpapercave.com/wp/wp4067426.jpg',
     imgText: 'main image description',
 };
 
@@ -26,13 +28,10 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: '10%',
         paddingRight: '10%',
         position: 'relative',
-//        backgroundColor: theme.palette.grey[800],
-//        color: theme.palette.common.white,
         marginBottom: theme.spacing(4),
-//        backgroundImage: 'url(https://source.unsplash.com/random)',
         backgroundImage: theme.palette.type === 'dark' ?
-            'url(https://wallpapercave.com/wp/wp4067426.jpg)':
-            'url(https://ipofficelive.com.au/wp-content/uploads/2019/03/slideshow-banner-test.png)',
+            `url(${darkBg})`:
+            `url(${lightBg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',

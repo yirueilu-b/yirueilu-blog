@@ -14,6 +14,16 @@ import ProjectImage1 from "../images/catSegmentation.png"
 import Button from '@material-ui/core/Button';
 import {Link} from "gatsby";
 
+import darkBg from "../images/dark_bg.jpg"
+import lightBg from "../images/light_bg.jpeg"
+
+import LINELogo from "../images/LINE.png"
+import IIILogo from "../images/III.png"
+import sinicaLogo from "../images/sinica.png"
+
+import NTUTLogo from "../images/NTUTLogo.png"
+import NCTULogo from "../images/NCTULogo.png"
+
 const section_padding_small = '5vh 10vw';
 const section_padding = '26vw';
 const section_divider = '1px';
@@ -37,8 +47,8 @@ const useStyles = theme => ({
         },
         // borderBottom: `${section_divider} solid ${theme.palette.divider}`,
         backgroundImage: theme.palette.type === 'dark' ?
-            'url(https://wallpapercave.com/wp/wp4067426.jpg)':
-            'url(https://ipofficelive.com.au/wp-content/uploads/2019/03/slideshow-banner-test.png)',
+            `url(${darkBg})`:
+            `url(${lightBg})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -220,15 +230,34 @@ function Experience() {
                     <Grid container item xs={12} justify="center" alignItems="center">
                         <Grid className={classes.logo} container item xs={12} md={3} justify="center">
                             <Avatar className={classes.avatarLogo}
+                                    alt="Institute of Information Science, Academia Sinica"
+                                    src={LINELogo}/>
+                        </Grid>
+                        <Grid className={classes.detail} item xs={12} md={9}>
+                            <Typography display='block' gutterBottom variant='h5'>
+                                LINE
+                            </Typography>
+                            <Typography gutterBottom variant='subtitle1'>
+                                Software Engineer, 10/2021 - PRESENT
+                            </Typography>
+                            <Typography display='block' gutterBottom variant='body1'>
+                                Integrate LINE AI product (CLOVA) with LINE services.
+                            </Typography>
+                        </Grid>
+                    </Grid>
+
+                    <Grid container item xs={12} justify="center" alignItems="center">
+                        <Grid className={classes.logo} container item xs={12} md={3} justify="center">
+                            <Avatar className={classes.avatarLogo}
                                     alt="Institute for Information Industry"
-                                    src="https://www.dtataiwan.org/img/back/original/aboutMember2/2020-06-30/20200630151150218.png"/>
+                                    src={IIILogo}/>
                         </Grid>
                         <Grid className={classes.detail} item xs={12} md={9}>
                             <Typography gutterBottom variant='h5'>
                                 Institute for Information Industry
                             </Typography>
                             <Typography gutterBottom variant='subtitle1'>
-                                Software Engineer, 09/2018 - PRESENT
+                                Software Engineer, 09/2018 - 10/2021
                             </Typography>
                             <Typography gutterBottom variant='body1'>
                                 As a software engineer in Institute for Information Industry,
@@ -243,7 +272,7 @@ function Experience() {
                         <Grid className={classes.logo} container item xs={12} md={3} justify="center">
                             <Avatar className={classes.avatarLogo}
                                     alt="Institute of Information Science, Academia Sinica"
-                                    src="https://d13i5xhouzkrd.cloudfront.net/assets/publisher-logos/logo-asiis-color.png"/>
+                                    src={sinicaLogo}/>
                         </Grid>
                         <Grid className={classes.detail} item xs={12} md={9}>
                             <Typography display='block' gutterBottom variant='h5'>
@@ -272,8 +301,8 @@ function Experience() {
                     <Grid container item xs={12} justify="center" alignItems="center">
                         <Grid className={classes.logo} container item xs={12} md={3} justify="center">
                             <Avatar className={classes.avatarLogo}
-                                    alt="Institute for Information Industry"
-                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/NCTU_emblem.svg/1200px-NCTU_emblem.svg.png"/>
+                                    alt="NCTU"
+                                    src={NCTULogo}/>
                         </Grid>
                         <Grid className={classes.detail} item xs={12} md={9}>
                             <Typography gutterBottom variant='h5'>
@@ -295,8 +324,8 @@ function Experience() {
                     <Grid container item xs={12} justify="center" alignItems="center">
                         <Grid className={classes.logo} container item xs={12} md={3} justify="center">
                             <Avatar className={classes.avatarLogo}
-                                    alt="Institute for Information Industry"
-                                    src="https://wwwtve.ntut.edu.tw/var/file/90/1090/msys_1090_3212376_26605.png"/>
+                                    alt="NTUT"
+                                    src={NTUTLogo}/>
                         </Grid>
                         <Grid className={classes.detail} item xs={12} md={9}>
                             <Typography gutterBottom variant='h5'>
