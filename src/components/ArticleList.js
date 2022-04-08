@@ -1,11 +1,11 @@
 import React from 'react';
+import ScrollToTopOnMount from './Layout/ScrollTopOnMount'
+import ArticleCard from './ArticleCard'
 import {withStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container'
-import ArticleCard from './ArticleCard'
 import Grid from '@material-ui/core/Grid';
 import article_list from '../articles/article_list.json'
 import Pagination from '@material-ui/lab/Pagination';
-import ScrollToTopOnMount from './Layout/ScrollTopOnMount'
 import Fade from '@material-ui/core/Fade';
 
 const ARTICLE_PER_PAGE = 5;

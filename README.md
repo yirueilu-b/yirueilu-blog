@@ -14,3 +14,7 @@ The original React App built with CRA could be found [here](https://github.com/y
 - Use `bash git_push.sh` to update on develop branch.
 - `npm run deploy` to publish new page.
 
+## TODO
+
+- Project/Work section and Project/Work card in about page
+- TOC for article detail

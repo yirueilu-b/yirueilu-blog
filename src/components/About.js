@@ -157,7 +157,10 @@ function Profile(props) {
                 <Grid className={classes.right} container item xs={12} md={8} justify="flex-start">
                     <Grid container item xs={12} justify="flex-start" alignItems="flex-start">
                         <Typography gutterBottom variant='h5'>About Me</Typography>
-                        <Typography gutterBottom variant='subtitle1'>Software engineer with 3 years of experience in implementing and applying deep learning models in real-world environment. Interested in learning new technologies especially about AI and Web. Passionate about creating fun and useful things and solving problems.</Typography>
+                        <Typography gutterBottom variant='subtitle1'>
+                            Software engineer with demonstrated experience in building web applications and applying deep learning models to a real-world environment.
+                            Interested in learning new technologies especially about ML and Web. Passionate about creating fun and useful things to solve problems.
+                        </Typography>
                         <Button component={Link}
                                 size="small"
                                 variant="outlined"
